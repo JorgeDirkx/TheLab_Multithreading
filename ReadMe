@@ -1,0 +1,44 @@
+A thread is a light-weight smallest part of a process that can run concurrently
+with the other parts(other threads) of the same process. Threads are independent
+because they all have separate path of execution that’s the reason if an exception
+occurs in one thread, it doesn’t affect the execution of other threads.
+All threads of a process share the common memory. The process of executing multiple threads
+simultaneously is known as multithreading.
+
+A thread can be in one of the following states:
+NEW – A thread that has not yet started is in this state.
+RUNNABLE – A thread executing in the Java virtual machine is in this state.
+BLOCKED – A thread that is blocked waiting for a monitor lock is in this state.
+WAITING – A thread that is waiting indefinitely for another thread to perform a particular action is in this state.
+TIMED_WAITING – A thread that is waiting for another thread to perform an action for up to a specified waiting time
+is in this state.
+TERMINATED – A thread that has exited is in this state.
+A thread can be in only one state at a given point in time.
+
+Creating a thread in Java
+
+There are two ways to create a thread in Java:
+1) By extending Thread class.
+2) By implementing Runnable interface.
+
+
+    getName(): It is used for Obtaining a thread’s name
+    getPriority(): Obtain a thread’s priority
+    isAlive(): Determine if a thread is still running
+    join(): Wait for a thread to terminate
+    run(): Entry point for the thread
+    sleep(): suspend a thread for a period of time
+    start(): start a thread by calling its run() method
+
+Concurrency:
+When the threads and main program are reading and writing the same variables, the values are unpredictable.
+The problems that result from this are called concurrency problems.
+--> The concurrency framework is a tool for developing multithread applications
+Using the utility class Collections we can use static methods to synchronise collections.
+  * synchronizedCollection()
+  * synchronizedList()
+  * synchronizedNavigableMap()
+  * synchronizedNavigableSet()
+  * synchronizedSet()
+  * synchronizedSortedMap()
+  * synchronizedSortedSet()
